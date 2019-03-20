@@ -1,6 +1,8 @@
 package pers.jiangyu.yuweather.ui;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -112,6 +114,11 @@ public class WeatherActivity extends AppCompatActivity {
                     }
                 });
          loadBingPic();
+    }
+
+    public static void actionStart(Context context){
+        Intent intent = new Intent(context,WeatherActivity.class);
+         context.startActivity(intent);
     }
 
     /**

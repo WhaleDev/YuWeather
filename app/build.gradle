@@ -11,7 +11,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     //Lambda表达式
-    compileOptions{
+    compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -22,7 +22,7 @@ android {
         }
     }
 //    数据绑定
-    dataBinding{
+    dataBinding {
         enabled = true;
     }
 }

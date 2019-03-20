@@ -1,5 +1,6 @@
 package pers.jiangyu.yuweather.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding; //自动生成的类
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(MainActivity.this, R.layout.activity_main);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -23,5 +25,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+    }
+    public static void actionStart(Context context){
+        Intent intent = new Intent(context,MainActivity.class);
+        context.startActivity(intent);
     }
 }
